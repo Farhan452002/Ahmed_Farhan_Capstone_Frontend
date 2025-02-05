@@ -1,0 +1,20 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.question-box {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.question-box:hover {
+    background-color: darkblue;
+}

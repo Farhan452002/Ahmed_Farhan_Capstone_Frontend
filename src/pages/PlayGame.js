@@ -6,6 +6,7 @@ function PlayGame() {
 
     return (
         <div>
+            
             <h2>Jeopardy Game</h2>
             <div className="board">
                 {categories.map((category, catIndex) => (

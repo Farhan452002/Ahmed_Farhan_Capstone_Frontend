@@ -27,7 +27,7 @@ button {
     font-size: 16px;
     margin: 5px;
     cursor: pointer;
-    background-color: blue;
+    background-color: lightgreen;
     color: white;
     border: none;
     border-radius: 5px;
@@ -53,4 +53,35 @@ button:hover {
 
 .question-modal button {
     margin-top: 10px;
+}
+
+.add{
+    background-color: green;
+}
+
+.subtract{
+    background-color: red;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.team-panel {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 150px;
+}
+
+div{
+    background-color:aliceblue;
+}
+
+.reset-button{
+    background-color: gray;
 }

@@ -22,6 +22,7 @@ function App() {
                         element={
                             <>
                                 <nav className="navbar">
+                                    <Link to="/landing-page" className="nav-button">Homepage</Link>
                                     <Link to="/play-game" className="nav-button">Play Game</Link>
                                     <Link to="/add-question" className="nav-button">Add Question</Link>
                                     <Link to="/view-questions" className="nav-button">View Questions</Link>
@@ -29,10 +30,12 @@ function App() {
                                 </nav>
 
                                 <Routes>
+                                    <Route path="/landing-page" element={<LandingPage />} />
                                     <Route path="/play-game" element={<PlayGame />} />
                                     <Route path="/add-question" element={<AddQuestion />} />
                                     <Route path="/view-questions" element={<ViewQuestions />} />
                                     <Route path="/edit-questions" element={<EditQuestions />} />
+                                
                                 </Routes>
                             </>
                         }

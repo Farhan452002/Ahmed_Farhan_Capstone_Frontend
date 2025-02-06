@@ -6,7 +6,7 @@ function LandingPage() {
 
     return (
         <div className="landing-container">
-            <h1>Welcome to Jeopardy!</h1>
+            <h1>Welcome to Farhan's Islamic Jeopardy!</h1>
             <button className="start-button" onClick={() => navigate("/play-game")}>
                 Start Game
             </button>

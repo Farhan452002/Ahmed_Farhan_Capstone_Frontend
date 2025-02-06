@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./AddQuestion.css";
 
 function AddQuestion() {
-    const [categories, setCategories] = useState(["Science", "History", "Math", "Literature", "Sports"]);
+    const [categories, setCategories] = useState(["Prophets", "Islamic History", "Quran", "Islamic Law", "Tabligh"]);
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     const [selectedPoints, setSelectedPoints] = useState(100);
     const [question, setQuestion] = useState("");

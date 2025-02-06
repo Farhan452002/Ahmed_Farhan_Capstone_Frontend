@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import "./PlayGame.css"; // Ensure you style the board properly
+import "./PlayGame.css"; // Ensure you have styles
 
 function PlayGame() {
     const [questions, setQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [showAnswer, setShowAnswer] = useState(false);
+    const [isQuestionAvailable, setIsQuestionAvailable] = useState(true);
 
     // Fetch questions from backend
     useEffect(() => {
@@ -25,7 +26,13 @@ function PlayGame() {
     // Handle clicking a button
     const handleQuestionClick = (category, points) => {
         const question = getQuestion(category, points);
-        setSelectedQuestion(question);
+        if (question) {
+            setSelectedQuestion(question);
+            setIsQuestionAvailable(true);
+        } else {
+            setSelectedQuestion({ question: "Please Add a Question", answer: "" });
+            setIsQuestionAvailable(false);
+        }
         setShowAnswer(false);
     };
 
@@ -48,13 +55,13 @@ function PlayGame() {
             {selectedQuestion !== null && (
                 <div className="question-modal">
                     <h3>Question:</h3>
-                    <p>{selectedQuestion ? selectedQuestion.question : "Please Add a Question"}</p>
+                    <p>{selectedQuestion.question}</p>
                     
-                    {selectedQuestion && (
+                    {isQuestionAvailable && (
                         <button onClick={() => setShowAnswer(true)}>Show Answer</button>
                     )}
 
-                    {showAnswer && selectedQuestion && (
+                    {showAnswer && isQuestionAvailable && (
                         <p><strong>Answer:</strong> {selectedQuestion.answer}</p>
                     )}
 
